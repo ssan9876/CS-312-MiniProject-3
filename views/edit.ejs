@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Post</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <h1>Edit Post</h1>
+
+  <form action="/edit/<%= post.blog_id %>" method="POST">
+    <label>Title:</label><br>
+    <input type="text" name="title" value="<%= post.title %>" maxlength="255" required><br><br>
+
+    <label>Post:</label><br>
+    <textarea name="body" rows="5" required><%= post.body %></textarea><br><br>
+
+    <button type="submit">Save Changes</button>
+  </form>
+
+  <br>
+  <a href="/">Cancel and go back</a>
+
+</body>
+</html>

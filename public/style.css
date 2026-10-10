@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 6px 12px;
+  margin-top: 5px;
+}
+
+.post {
+  margin-bottom: 15px;
+}
+
+.error {
+  color: #c00;
+}
+
+.notice {
+  color: #070;
+}

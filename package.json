@@ -1,0 +1,15 @@
+{
+  "name": "blogdb",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "db:init": "node --env-file-if-exists=.env db/init.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.19.0",
+    "pg": "^8.23.1"
+  }
+}

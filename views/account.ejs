@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Account</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <h1>My Account</h1>
+
+  <p>Signed in as <strong><%= user.name %></strong> (<%= user.login %>)</p>
+
+  <% if (notice) { %>
+    <p class="notice"><%= notice %></p>
+  <% } %>
+  <% if (error) { %>
+    <p class="error"><%= error %></p>
+  <% } %>
+
+  <form action="/account" method="POST">
+    <label>User ID:</label><br>
+    <input type="text" name="user_id" value="<%= values.user_id || '' %>" maxlength="255" required><br><br>
+
+    <label>New Password (leave blank to keep your current one):</label><br>
+    <input type="password" name="new_password" maxlength="255" autocomplete="new-password"><br><br>
+
+    <label>Current Password (required to save changes):</label><br>
+    <input type="password" name="current_password" maxlength="255" autocomplete="current-password" required><br><br>
+
+    <button type="submit">Update Account</button>
+  </form>
+
+  <br>
+  <a href="/">Back to blog</a>
+
+</body>
+</html>
